@@ -19,7 +19,7 @@ def get_random_satz():
 
 
 def check_satz(p_satz):
-    if len(p_satz) < 15 or len(p_satz) > 280:
+    if len(p_satz) < 15 or len(p_satz) > 280 or p_satz[0] == ')':
         return False
     else:
         return True
