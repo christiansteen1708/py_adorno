@@ -3,7 +3,7 @@ Twitterbot to post daily quotes from German philosopher and sociologist Theodor 
 No source files included.
 
 ## dependency:
-py_adorno depends on  nltk for sentence segmentation.
+py_adorno depends on [nltk](https://github.com/nltk/nltk) for sentence segmentation.
 
 ## Sourcefiles:
 Put sourcefiles in \./src/.
