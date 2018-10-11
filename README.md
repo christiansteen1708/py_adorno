@@ -1,11 +1,9 @@
 # py_adorno
-Twitterbot to post daily quotes from german philosopher and sociologist Theodor W. Adorno.
-
+Twitterbot to post daily quotes from German philosopher and sociologist Theodor W. Adorno.
 No source files included.
 
-# Sourcefiles: 
-Put sourcefiles in \./src/ named "1" to "20" (Adorno GS has 20 books).
-
+# Sourcefiles:
+Put sourcefiles in \./src/.
 
 # API-Access via birdy
 twitter-api in api.py:
@@ -16,4 +14,3 @@ twitter-api in api.py:
                       ACCESS_TOKEN,
                       ACCESS_TOKEN_SECRET)
 ```                      
-                 

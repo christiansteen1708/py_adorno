@@ -1,17 +1,23 @@
+import os
 from api import client
 from nltk import sent_tokenize
 from random import choice
-from random import randint
 import datetime
 
-buch = ''
+buch_chosen = ''
+path = './src/'
+files = []
+
+for filename in os.listdir(path):
+    files.append(filename)
+files_anzahl = len(files)
 
 
 # Methoden:
 def get_random_satz():
-    global buch
-    buch = str(randint(1, 20))
-    with open('./src/'+buch, 'rt') as fin:
+    global buch_chosen
+    buch_chosen = str(choice(files))
+    with open(path+buch_chosen, 'rt') as fin:
         buchtext_gesamt = fin.read().decode('utf-8')
     sent_tokenize_list = sent_tokenize(buchtext_gesamt)
     ein_random_satz = choice(sent_tokenize_list)
@@ -38,4 +44,4 @@ tweet(satz)
 
 # log
 with open('log', 'at') as fout:
-    fout.write(str(datetime.datetime.now())+'\t'+buch+'\t'+satz+'\n')
+    fout.write(str('\n'+datetime.datetime.now())+'\t'+buch_chosen+'\t'+satz)
