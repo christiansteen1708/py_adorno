@@ -10,7 +10,7 @@ files = []
 
 for filename in os.listdir(path):
     files.append(filename)
-files_anzahl = len(files)
+files.remove('.gitignore')
 
 
 # Methoden:
@@ -44,4 +44,4 @@ tweet(satz)
 
 # log
 with open('log', 'at') as fout:
-    fout.write(str('\n'+datetime.datetime.now())+'\t'+buch_chosen+'\t'+satz)
+    fout.write('\n'+str(datetime.datetime.now())+'\t'+buch_chosen+'\t'+satz)
